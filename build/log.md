@@ -4,6 +4,21 @@ A dated journal of work done on the prop. Newest entries on top.
 
 ---
 
+## 2026-05-06 — Dimensional analysis v1 from single frame
+
+- Source: `reference/screenshots/Screenshot 2026-05-06 at 1.53.15 PM.png`
+  (Arthur Dent holding the Guide open).
+- Reference: nose-to-chin = 180 px = 80 mm assumed.
+- Computed closed-prop dimensions: ~152 × 105 × 32 mm
+  (6.0 × 4.1 × 1.26 in), ± ~15% mostly from the nose-to-chin assumption.
+- Detailed analysis: `reference/dimensional-analysis/dimensions-v1.md`.
+- Major implication: 5" landscape display no longer fits the envelope.
+  Updated leading candidate to 4" 800×480 IPS landscape. Captured in
+  OPEN-QUESTIONS #2.
+- OPEN-QUESTIONS #1 marked PROVISIONAL pending a cross-check against a
+  second anatomical reference (hand or head width) or a more
+  camera-perpendicular frame.
+
 ## 2026-05-06 — Researched: unmarked-raffle-on-personal-website scenario
 
 - Question: would running a paid-entry raffle on the personal website,
