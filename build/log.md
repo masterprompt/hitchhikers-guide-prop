@@ -4,6 +4,58 @@ A dated journal of work done on the prop. Newest entries on top.
 
 ---
 
+## 2026-05-06 — End-of-session summary
+
+Locked in the screen choice and scaled-down prop dimensions to close
+out the day.
+
+**Decisions made today:**
+
+1. Project bootstrap and structure (ADR-0001, ADR-0002, ADR-0003).
+2. License: CC BY-NC-SA 4.0 with NOTICE.md for third-party IP
+   (ADR-0004).
+3. IP research: prop cannot be commercialized; raffle-on-own-website
+   adds state lottery violation; free giveaways and 501(c)(3)-routed
+   raffles are the clean disposal paths
+   (`docs/research/commercial-sale-feasibility.md`).
+4. Dimensional analysis v1 from one frame: closed prop ≈ 152 × 105 ×
+   32 mm, ±15% (`reference/dimensional-analysis/dimensions-v1.md`).
+5. Dual-display architecture: two screens, one per inner cover,
+   butted at the spine (ADR-0005).
+6. Screen choice: two 4" 720×720 IPS MIPI panels with bundled HDMI
+   controller boards. Power budget was the deciding factor — 12 V
+   options dropped, 5 V/3.3 V kept (ADR-0006).
+7. Prop dimensions v2 (post-screen-choice): closed prop scales to
+   **~127 × 82 × 28 mm**, pocket-paperback class
+   (`reference/dimensional-analysis/dimensions-v2.md`).
+
+**Open for next session, in dependency order:**
+
+- **OPEN-QUESTIONS #1.** Cross-check v1 dimensions with a second
+  anatomical reference (hand or head width) or a more
+  perpendicular-to-camera frame. Tightens the ±15% error bar and
+  confirms or revises v2.
+- **Bezel-arithmetic discrepancy** (in `dimensions-v1.md`).
+  Clarify which physical edge the side bezel measurement reaches.
+  May affect screen-to-cover ratio assumed by v2.
+- **OPEN-QUESTIONS #3.** Compute-board fit: a Pi 4 is 17 mm thick and
+  doesn't fit a 10 mm internal half. Decide between (a) thicken prop
+  to 32 mm, (b) Pi CM4 on custom thin carrier, or (c) Pi Zero 2 W
+  with HDMI-to-MIPI bridges. Validate during CAD layout.
+- **OPEN-QUESTIONS #4–7.** Trigger mechanism, audio, battery
+  specifics, enclosure construction — unblocked once compute and
+  final dimensions are pinned.
+- **OPEN-QUESTIONS #8.** Content production pipeline can start in
+  parallel — render at 1440 × 720 master (two 720×720 halves) with a
+  dark vertical band at the seam.
+- Source the FanyiTek 4" 720×720 panels (Amazon B0DWMQ6N27 or
+  CDTech equivalent).
+
+**Repo state:** clean, all decisions captured in ADRs and
+dimensions docs. Public GitHub repo not yet created — when you do,
+remember the license picker should be set to "none" so the manually
+committed CC BY-NC-SA 4.0 LICENSE controls.
+
 ## 2026-05-06 — Dual-display architecture decision and per-screen analysis
 
 - Clarified design: prop uses **two displays**, one per inner cover,

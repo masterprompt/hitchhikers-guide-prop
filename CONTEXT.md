@@ -48,9 +48,19 @@ reference. Screenshots captured from the film live in
   a deliberate dark vertical band at the seam line.
 - **Cover / spine / outer shell** — the outer physical shell of the book.
 
+## Working dimensions
+
+Per dimensions-v2 (post-ADR-0006 screen choice): closed prop
+**~127 × 82 × 28 mm** (5.0 × 3.2 × 1.1 in), pocket-paperback class.
+Smaller than the film-accurate ~152 × 105 × 32 mm v1 estimate, scaled
+down to fit two 4" 720×720 IPS panels on a single-cell LiPo power
+budget. See `reference/dimensional-analysis/dimensions-v2.md`.
+
 ## Build philosophy
 
 Screen accuracy first, ergonomics second, expandability third. The prop
 should look right in hand and on camera before optimizing for things like
 extended battery life or modular content swapping. If a choice trades
-fidelity for engineering elegance, fidelity wins.
+fidelity for engineering elegance, fidelity wins — except where physical
+constraints (battery voltage, internal volume) force a scale-down, in
+which case proportions are preserved over absolute size.

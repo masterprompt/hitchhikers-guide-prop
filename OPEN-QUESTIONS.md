@@ -25,68 +25,41 @@ The 80 mm nose-to-chin assumption is the largest single error source
 and is on the high end of typical adult-male anthropometrics; tightening
 this could shift the dimensions down by ~13%.
 
-## 2. Screen size, aspect ratio, resolution (DUAL-DISPLAY)
+## 2. Screen size, aspect ratio, resolution (RESOLVED)
 
-**Depends on:** #1 (provisionally known).
+**Resolved by:** ADR-0006 — two 4" 720×720 IPS MIPI panels with
+bundled HDMI controller boards (FanyiTek or equivalent). Selected
+primarily on power-budget grounds (3.3 V panel / 5 V via USB on the
+controller; no 12 V boost or multi-cell battery needed).
 
-**Architectural decision:** the prop uses **two displays**, one per
-inner cover, butted at the spine. See ADR-0005.
+**Consequence:** closed prop scales down to ~127 × 82 × 28 mm — see
+[`reference/dimensional-analysis/dimensions-v2.md`](reference/dimensional-analysis/dimensions-v2.md).
 
-**Per-screen target (per dimensions-v1):** ~92 × 86 mm active area,
-~1:1 aspect, matched panels.
+## 3. Compute platform (NEEDS RE-EVALUATION POST-V2)
 
-**The sourcing problem:** no off-the-shelf hobbyist panel hits exactly
-92 × 86 mm at a near-square aspect. Available options:
+**Depends on:** #2 (resolved per ADR-0006).
 
-- **4" 480×480 square IPS** (Waveshare and similar): ~70 × 70 mm
-  active. 24% smaller per side than the film-prop target. Matched
-  pair available.
-- **4" 720×720 round/square** (e.g., Waveshare, BTF-Lighting): ~72 × 72
-  mm active. Same magnitude undersize; higher resolution.
-- **3.5" 320×480 SPI LCD**: aspect is 3:2 not 1:1. Wrong shape.
-- **5" 1080×1080 square IPS**: ~110 × 110 mm active. Too big — exceeds
-  the 105 mm v1 cover-width.
+**Question:** What drives the two HDMI inputs (one per panel
+controller board)?
 
-**Two design paths to choose between:**
+**Sub-issue surfaced in v2 dimensions:** with the prop scaled down to
+~28 mm closed thickness, internal volume per half is ~10 mm deep. A
+Pi 4 (17 mm thick) does not fit in one half. Three paths:
 
-- **A.** Match panel to cover. Use a 4" 70 × 70 mm panel, accept wider
-  matte than film-accurate. Closed prop stays at v1 dimensions.
-- **B.** Match cover to panel. Pick the panel and shrink the closed
-  prop dimensions so the screen-to-cover ratio matches film. Closed
-  prop ends up smaller than film.
+- **Pi 4 / Pi 5 with thicker prop.** Increase closed thickness to
+  ~32–35 mm to accommodate Pi 4 in the lower half. Loses some prop
+  fidelity; simplest electronically.
+- **Pi Compute Module 4 on custom thin carrier.** CM4 is 55 × 40 ×
+  4.7 mm and fits comfortably. Carrier board would expose dual HDMI.
+  Most custom and expensive; thinnest result.
+- **Pi Zero 2 W + per-panel HDMI-to-MIPI bridge boards.** Pi Zero 2 W
+  is 5 mm thick. Only one HDMI on the Zero, so the second panel needs
+  to be driven from GPIO (DPI / SPI) instead — adds wiring complexity
+  and may push to a Pi Zero 2 W with a custom HAT. Cheap but more
+  bespoke.
 
-Open follow-up:
-
-- Confirm the v1 cover-width estimate by cross-check (see #1) before
-  picking A vs B.
-- Resolve the bezel-measurement discrepancy (see dimensions-v1.md
-  bezel-arithmetic section) — may inform how aggressively the matte
-  needs to scale.
-
-## 3. Compute platform
-
-**Depends on:** #2.
-
-**Question:** What drives **two** synchronized displays?
-
-**Implications of the dual-display decision (ADR-0005):** Pi Zero 2 W
-has only one HDMI output. To drive two panels from a single board,
-options are:
-
-- **Pi 4 / Pi 5 with dual micro-HDMI.** Both panels treated as full
-  HDMI displays. Most ergonomic in software. Larger physical board than
-  Zero 2 W.
-- **Pi Zero 2 W + DPI display(s).** DPI uses GPIO pins directly to
-  drive a parallel-RGB panel; can pair with the HDMI output for a
-  second panel. Tight wiring, GPIO-pin-hungry.
-- **Pi Zero 2 W + USB display adapter.** Lower performance, additional
-  USB hub may be needed. Probably not viable for synchronized video.
-- **Two ESP32-S3 + parallel TFT panels, sync'd over an internal bus.**
-  Cheap, small, but writing synchronized video playback firmware is
-  non-trivial.
-
-**Tentative:** Raspberry Pi 4 with dual micro-HDMI. Trades some board
-size for software simplicity.
+**Tentative:** Pi 4 with dual micro-HDMI, prop thickness allowed to
+grow to ~32 mm if needed. Validate during CAD layout.
 
 ## 4. Open-trigger mechanism
 
@@ -112,8 +85,11 @@ for room audio. No exposed jack, to preserve prop aesthetic.
 
 **Question:** Cell type, capacity, charging port location.
 
-**Tentative:** LiPo with TP4056-class charge controller. USB-C charging
-port hidden along the spine or under a removable panel.
+**Tentative (post-ADR-0006):** **single-cell LiPo + 5 V boost regulator**
++ TP4056-class charge controller. The 4" panel kits run from 5 V via
+micro-USB on the controller boards, so a single-cell cell + boost is
+the cleanest path. No multi-cell pack needed. USB-C charging port
+hidden along the spine or under a removable panel.
 
 ## 7. Enclosure construction
 
