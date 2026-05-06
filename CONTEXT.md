@@ -13,7 +13,8 @@ Guide.
 In scope:
 
 - Clamshell book enclosure that opens like the on-screen prop.
-- Embedded display in the upper inner panel.
+- **Two embedded displays**, one per inner cover, butted at the spine
+  to render a single visible image when open. See ADR-0005.
 - Speaker for synchronized audio.
 - Plays pre-rendered video files of Guide entries.
 - Triggered on open (mechanism TBD — likely reed switch).
@@ -40,10 +41,11 @@ reference. Screenshots captured from the film live in
   Blaster entry).
 - **Tier** — the functional level of the prop. We are building Tier 2
   (see ADR-0001).
-- **Inner upper panel** — the top half of the book interior when held open;
-  hosts the screen.
-- **Inner lower panel** — the bottom half when held open; hosts the
-  electronics envelope and (cosmetically) the keypad.
+- **Inner panel(s)** — the inside faces of the two clamshell halves
+  when opened. Each hosts one of the two displays.
+- **Spine seam** — the small physical gap between the two panels where
+  they meet at the spine. Visually disguised in content rendering with
+  a deliberate dark vertical band at the seam line.
 - **Cover / spine / outer shell** — the outer physical shell of the book.
 
 ## Build philosophy

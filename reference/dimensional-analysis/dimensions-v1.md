@@ -133,6 +133,117 @@ the prop appears in hand on screen.
 
 ---
 
+## Per-screen analysis (added after dual-display clarification)
+
+Source frame: `reference/screenshots/Screenshot 2026-05-06 at 1.53.21 PM.png`
+— close-up of the open Guide showing the screen with content playing.
+
+The user clarified that the prop is intended as a **dual-display build**
+(one panel per inner cover, butted at the spine), and that the
+measurements in this frame are for **one half** of the open Guide. See
+ADR-0005 for the architectural rationale.
+
+### Measurements (one half)
+
+From [`notes.md`](notes.md):
+
+- Book cover width (one half): 1033 px
+- Screen width: 905 px
+- Screen height: 842 px
+- Matte/bezel side: 116 px
+- Matte/bezel top/bottom: 156 px
+
+### Frame-specific scale
+
+Using the v1 cover-width estimate of 105 mm (note: this assumption
+inherits the v1 error bar):
+
+> 105 mm / 1033 px = **0.1017 mm/px**
+
+### Computed per-screen dimensions
+
+| Element | Pixels | Real-world (mm) | Real-world (in) |
+|---|---|---|---|
+| Each screen (active area) | 905 × 842 | **92.0 × 85.6** | 3.62" × 3.37" |
+| Per-screen aspect ratio | — | **1.075 : 1** (basically square) | — |
+| Combined display when open | 1810 × 842 | ~184 × 86 | 7.24" × 3.37" |
+| Top/bottom matte (each) | 156 px | ~15.9 | ~0.62" |
+| Side matte (each) | 116 px | ~11.8 | ~0.46" |
+
+### Aspect-ratio reconciliation
+
+The combined open-Guide visible display in the film reads as ~2:1
+landscape. Two near-square panels butted side-by-side gives a 2.15:1
+combined aspect, which matches what's observable in the source frame.
+The dual-display design is consistent with what the film prop appears
+to do.
+
+### Bezel arithmetic discrepancy (open issue)
+
+The horizontal numbers do not internally reconcile:
+
+- Screen width 905 + 2 × side bezel 116 = **1137 px**
+- Cover width = **1033 px**
+- Discrepancy: **+104 px** (≈ +10.6 mm)
+
+That is, screen-plus-symmetric-side-bezels overshoots the cover width
+by ~10%. Three plausible explanations:
+
+1. **The 116 px "matte/bezel side" is the leather border only**, not
+   the full distance from cover edge to screen edge. There is a silver
+   metal frame between the leather and the screen visible in the
+   source image; that frame's width may be unmeasured.
+2. **Asymmetric bezel.** The film prop has a speaker grille on one
+   side (visible bottom-left in the source frame), so the matte on
+   that side may be wider than on the opposite side. A single 116 px
+   measurement applied symmetrically would over-count.
+3. **Different reference edges.** "Cover width" may have been measured
+   to the outer edge of one element (e.g., cover leather), while
+   "screen width" is the active LCD area, while "bezel side" is to a
+   third reference (e.g., the silver frame outer edge).
+
+**Action:** clarify which physical edge each measurement is taken to,
+in a follow-up measurement pass. Until resolved, treat the screen
+width and height as more reliable than the bezel measurements.
+
+### Vertical sanity check
+
+Screen height 842 + 2 × top/bottom bezel 156 = **1154 px**.
+
+We don't have a direct cover-height measurement in this frame to
+compare against, but the v1 cover height is 152 mm = ~1496 px in this
+frame's scale. That leaves 1496 − 1154 = 342 px (~35 mm) unaccounted
+for, presumably distributed as additional matte or trim above/below
+the measured bezel. Plausible — many prop devices have larger bezels
+at the long ends than the short ends.
+
+### Implications for screen sourcing
+
+A 92 × 86 mm square-ish IPS panel is not a common hobbyist part.
+Available options and how they compare:
+
+| Available panel | Active area | Compared to target |
+|---|---|---|
+| 4" 480×480 square IPS | ~70 × 70 mm | **24% smaller** per side |
+| 4" 720×720 round/square | ~72 × 72 mm | **22% smaller** per side |
+| 3.5" 320×480 SPI LCD | ~75 × 50 mm | Wrong aspect (3:2 not 1:1) |
+| 5" 1080×1080 square IPS | ~110 × 110 mm | Too large for 105 mm cover |
+
+There is no off-the-shelf hobbyist panel that hits 92 × 86 mm at the
+target aspect. Two practical paths:
+
+- **A.** Match panel to cover: use the best-available square panel
+  (~70 × 70 mm) and live with a wider matte than the film prop has.
+  Closed prop dimensions stay film-accurate; the matte:screen ratio
+  drifts.
+- **B.** Match cover to panel: scale the closed prop dimensions down
+  so the panel-to-cover ratio matches the film. Closed prop becomes
+  smaller than the film-accurate 152 × 105 mm.
+
+The right choice depends on which fidelity matters more — overall
+prop size or screen-to-cover proportion. Recommend evaluating both
+mock-ups before committing.
+
 ## Next step before locking the dimensions
 
 Before committing to a 3D model based on this, do at least one of:

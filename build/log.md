@@ -4,6 +4,30 @@ A dated journal of work done on the prop. Newest entries on top.
 
 ---
 
+## 2026-05-06 — Dual-display architecture decision and per-screen analysis
+
+- Clarified design: prop uses **two displays**, one per inner cover,
+  butted at the spine. Each renders one half of the on-screen image.
+- This reconciles the previous aspect-ratio confusion: combined ~2:1
+  visible display = two ~1:1 panels side-by-side.
+- Per-screen target dimensions (using v1 cover-width scale):
+  ~92 × 86 mm active area, near-square aspect.
+- Wrote ADR-0005 capturing the dual-display rationale and consequences.
+- Updated OPEN-QUESTIONS:
+  - #2: now requires two matched square-ish panels; flagged the
+    sourcing problem (no off-the-shelf hobbyist panel hits 92 × 86 mm
+    at 1:1; available 4" square panels are ~70 × 70 mm).
+  - #3: dual-display means Pi 4/5 with dual micro-HDMI is the new
+    leading compute candidate (Zero 2 W only has one HDMI).
+  - #8: content pipeline must split master into two synchronized
+    streams; render with a dark vertical band at the seam.
+- Updated CONTEXT.md scope and glossary to reflect dual-display.
+- Open issue: bezel arithmetic in dimensions-v1 doesn't internally
+  reconcile (screen + 2×side-bezel exceeds cover width by ~10 mm).
+  Likely cause: side-bezel measurement is leather only, not full
+  cover-edge-to-screen distance. Needs follow-up measurement clarifying
+  which physical edge each measurement reaches.
+
 ## 2026-05-06 — Dimensional analysis v1 from single frame
 
 - Source: `reference/screenshots/Screenshot 2026-05-06 at 1.53.15 PM.png`
