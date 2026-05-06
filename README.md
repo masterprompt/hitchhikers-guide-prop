@@ -27,6 +27,7 @@ screen selection, which gates everything else physical.
 | `build/log.md` | Dated build journal |
 | `build/photos/` | Build progress photos |
 | `docs/adr/` | Architecture Decision Records — one decision per file |
+| `docs/research/` | Closed research questions — feasibility studies, IP analysis |
 | `CONTEXT.md` | Vision, scope, glossary |
 | `OPEN-QUESTIONS.md` | Undecided items, in dependency order |
 

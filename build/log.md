@@ -4,6 +4,23 @@ A dated journal of work done on the prop. Newest entries on top.
 
 ---
 
+## 2026-05-06 — Researched commercial-sale feasibility
+
+- Question: can the prop be sold on Etsy or eBay?
+- Conclusion: no — copyright on the 2005 film's prop design and residual
+  trademark/literary IP held by Disney and the Adams estate make it
+  unsafe and unlawful, regardless of profit margin.
+- Found that Disney's two USPTO trademarks for "Hitchhiker's Guide to
+  the Galaxy" were abandoned in 2007, but copyright in the prop design
+  is still in force and is the load-bearing risk. Trade dress and the
+  Adams estate's marks add additional layers.
+- Marketplace enforcement is fast: Disney files thousands of DMCAs per
+  month; Etsy/eBay pull listings within hours.
+- Practical alternatives written up in
+  `docs/research/commercial-sale-feasibility.md`. Short version: build
+  for self, document publicly, develop a separate original-design prop
+  brand if commercial revenue is the goal.
+
 ## 2026-05-06 — License added for public GitHub release
 
 - Repo will be published publicly on GitHub.
