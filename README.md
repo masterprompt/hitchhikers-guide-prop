@@ -39,3 +39,17 @@ screen selection, which gates everything else physical.
 - Build log entries are dated and prepended (newest at top).
 - Compressed images (JPG/PNG/WebP) are tracked in git. Video, audio, and
   raw camera files are not — see ADR-0003.
+
+## License
+
+This project's original work — written analysis, decision records, 3D
+models, schematics, software, and build photographs — is licensed under
+the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+International** license. See [`LICENSE`](LICENSE) for the full text and
+[`NOTICE.md`](NOTICE.md) for the third-party-IP statement and the
+boundaries of what the license does and does not cover. See ADR-0004 for
+the rationale.
+
+This is a non-commercial fan project. The Hitchhiker's Guide to the
+Galaxy and all related characters, designs, and trade dress are the
+property of their respective rights holders.

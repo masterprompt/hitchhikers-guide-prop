@@ -4,6 +4,18 @@ A dated journal of work done on the prop. Newest entries on top.
 
 ---
 
+## 2026-05-06 — License added for public GitHub release
+
+- Repo will be published publicly on GitHub.
+- Selected CC BY-NC-SA 4.0 — see ADR-0004 for rationale.
+- GitHub repo-creation license picker doesn't include CC content
+  licenses, so picker was set to "none" and the canonical license text
+  is committed manually as `LICENSE`.
+- Added `NOTICE.md` clarifying third-party IP boundaries and that the
+  film and its characters/designs remain the property of their rights
+  holders.
+- Updated README with a License section.
+
 ## 2026-05-06 — Project bootstrapped
 
 - Created directory structure under `~/Projects/Personal/hitchhikers-guide-prop/`.
