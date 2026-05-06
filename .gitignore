@@ -1,0 +1,50 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Video — rendered or sourced, regenerable from project files
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.m4v
+
+# Audio — recordings, dictation, rendered narration
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+*.aac
+
+# Raw camera files — large, source files exist elsewhere
+*.raw
+*.dng
+*.cr2
+*.nef
+*.arw
+
+# 3D slicer outputs (regenerable from STL + slicer settings)
+*.gcode
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# Build artifacts
+dist/
+build-output/
