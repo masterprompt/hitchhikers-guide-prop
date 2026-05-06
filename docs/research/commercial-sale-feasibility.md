@@ -321,8 +321,96 @@ specifically. There are cleaner ways to dispose of one finished build:
   listing is the listing getting yanked anyway, so the "sell it to
   recover materials cost" dollars probably don't materialize.
 
+## Addendum (2026-05-06): the unmarked-raffle-on-our-own-website scenario
+
+Proposal considered: run a raffle on a personal website. Show a video of
+the prop in operation but don't name what it is. Raffle proceeds are how
+the prop gets disposed of and any cost is recouped.
+
+This idea makes the legal posture **worse**, not better. Three reasons:
+
+### 1. Raffles by individuals are unlawful in essentially every US state
+
+A raffle is legally a lottery — it has the three elements of prize,
+chance, and consideration (paid entry). In every US state that permits
+raffles at all, **only registered nonprofit or charitable organizations
+are eligible to host them.** A private individual running a paid-entry
+raffle is running an unlicensed lottery, which is a separate violation
+of state gambling law unrelated to anything about IP.
+
+Three states (Alabama, Hawaii, Utah) ban raffles entirely. The other 47
+allow them only for qualifying nonprofits, and most require a license
+or registration.
+
+So the "raffle" framing introduces a state-law problem that the original
+"sell on Etsy" framing didn't have.
+
+### 2. Hiding the name doesn't unrecognize the work
+
+Copyright protects the *expression* — the visual design of the prop —
+not the *label*. A video of the operating prop shows the protected work
+in motion. Anyone who has seen the 2005 film recognizes it instantly.
+The "DON'T PANIC" cover, clamshell shape, and screen layout are
+distinctive trade dress.
+
+Worse, omitting the name while displaying the work is generally
+**evidence of bad faith**. Courts and DMCA reviewers read deliberate
+obscuration as awareness of infringement, not as a defense against it.
+
+### 3. The value proposition collapses without the name
+
+The reason anyone would pay to enter the raffle is that they recognize
+what it is. The prop's market value is entirely a function of its
+identity as the Hitchhiker's Guide. So:
+
+- If the video is recognizable enough that people pay to enter →
+  copyright infringement is intact.
+- If the video is unrecognizable enough that copyright doesn't apply →
+  no one pays to enter.
+
+You cannot have both "valuable enough to raffle" and "not infringing."
+
+### Cleaner ways to achieve the same outcome
+
+If the underlying goal is "let a fan win it, recoup material costs,"
+there are clean paths:
+
+- **Free sweepstakes / giveaway.** No paid entry, no lottery law issue.
+  "Subscribe, comment, or share to enter — no purchase necessary."
+  Pick a winner and ship. Distribution of an infringing copy still
+  exists technically, but free fan giveaways are essentially never
+  pursued.
+- **Tip-jar adjacent giveaway.** Free giveaway plus a separate, opt-in
+  link to support your projects ("if you like my builds, you can tip
+  here"). The two transactions are not bundled, so the giveaway does
+  not include consideration. This is how creators commonly recoup
+  costs without crossing into raffle territory.
+- **Donate the prototype to a 501(c)(3) makerspace or fan-club, who
+  then run a licensed raffle.** Some makerspaces (including the
+  Waukesha Makerspace if it's a 501(c)(3)) hold fundraiser raffles
+  under their nonprofit raffle license. The donor (you) is no longer
+  the raffle operator, the legal posture flips, and the rights-holder
+  enforcement risk is near zero against a charity raffle.
+- **Patreon / ko-fi / subscription model where the prop is a thank-you
+  to a randomly-selected supporter.** Same legal mechanic as a
+  sweepstakes if structured with no-purchase-necessary entry.
+
+### Updated recommendation
+
+Don't run a raffle as an individual — it adds a state lottery violation
+on top of the copyright issue. If you want to put it in a fan's hands
+with some financial offset:
+
+- A **free giveaway with a separate tip jar** is the cleanest path.
+- If a makerspace or fan-club nonprofit will accept the donation, hand
+  it off to them and let them run a licensed fundraiser raffle.
+
 ## Sources
 
+- [Eventgroove — US Raffle Laws by State](https://www.eventgroove.com/blog/us-raffle-laws-by-state/)
+- [Zeffy — 501(c)(3) Raffle Laws by State 2026](https://www.zeffy.com/blog/raffle-laws-by-state)
+- [Donorbox — U.S. Raffle Laws Explained](https://donorbox.org/nonprofit-blog/raffle-laws)
+- [Chance2Win — Online Raffle Legal Rules by U.S. State](https://chance2win.org/us-state-online-legal-rules/)
 - [USPTO record for "Hitchhiker's Guide to the Galaxy" — Disney, Serial 78614189, abandoned 2007](https://uspto.report/TM/78614197)
 - [USPTO record for "Hitchhiker's Guide to the Galaxy" — Disney, Serial 78979873, abandoned](https://trademarks.justia.com/789/79/hitchhiker-s-guide-to-the-galaxy-78979873.html)
 - ["The Hitchhiker's Guide to the Galaxy" — Adams, Douglas, USPTO record](https://uspto.report/TM/74417641/)

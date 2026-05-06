@@ -4,6 +4,21 @@ A dated journal of work done on the prop. Newest entries on top.
 
 ---
 
+## 2026-05-06 — Researched: unmarked-raffle-on-personal-website scenario
+
+- Question: would running a paid-entry raffle on the personal website,
+  with the prop unnamed (just a video), avoid the IP issues?
+- Answer: no, and it makes things worse.
+  - State lottery law: individuals cannot run paid-entry raffles in any
+    US state. Only registered 501(c)(3) nonprofits qualify (and 3 states
+    ban raffles outright).
+  - Copyright: hiding the name doesn't unrecognize the work; deliberate
+    obscuration is read as bad faith.
+  - Value proposition self-cancels: people only pay to enter because
+    they recognize what it is, which is exactly the infringement.
+- Cleaner alternatives: free sweepstakes with separate tip jar, or
+  donate to a 501(c)(3) makerspace that already holds a raffle license.
+
 ## 2026-05-06 — Refined research: one-time prototype sale scenario
 
 - Clarified intent: one-time build, publish plans for free, sell the
