@@ -4,6 +4,21 @@ A dated journal of work done on the prop. Newest entries on top.
 
 ---
 
+## 2026-05-06 — Refined research: one-time prototype sale scenario
+
+- Clarified intent: one-time build, publish plans for free, sell the
+  single prototype.
+- Conclusion unchanged for the prototype sale: still copyright
+  infringement, no "first build" exception. Most likely real outcome:
+  Etsy/eBay listing pulled before it sells.
+- Free plan distribution is in a different bucket: technically
+  derivative, but free fan-file distribution is essentially never
+  pursued by rights holders. Existing CC BY-NC-SA 4.0 license is the
+  right vehicle.
+- Recommended disposal alternatives: gift, donate to fan raffle, or
+  display indefinitely. Full updated analysis in the addendum to
+  `docs/research/commercial-sale-feasibility.md`.
+
 ## 2026-05-06 — Researched commercial-sale feasibility
 
 - Question: can the prop be sold on Etsy or eBay?

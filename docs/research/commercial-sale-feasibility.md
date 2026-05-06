@@ -224,6 +224,103 @@ skills built here transfer cleanly. The IP exposure does not.
 
 ---
 
+## Addendum (2026-05-06): the one-time-prototype-sale scenario
+
+After the initial writeup, the project intent was clarified: build the
+prop **once**, publish the plans **for free**, and **sell the single
+prototype** to dispose of it. This narrows the scenario but does not
+change the legal conclusion. Treating it as two separate questions:
+
+### Question 1: Can the plans be published for free?
+
+Strictly speaking, the published plans (CAD, STLs, code, schematics) are
+derivative works of the on-screen prop design. Distributing them, even
+gratis, is technically copyright infringement.
+
+**Practical reality:** rights holders almost never pursue free
+distribution of fan-made prop files. The enforcement bar is "is this
+causing commercial harm?" Free files don't clear it, and the optics of
+"Disney sues hobbyist for sharing free fan files" are uniformly bad for
+the rights holder. Free fan files for *Star Wars* helmets, *Iron Man*
+gauntlets, *Halo* armor, and dozens of other franchises sit on Printables
+and Thingiverse for years without takedowns.
+
+**Risk:** low. Most likely outcome: nothing happens. Worst likely
+outcome: a polite takedown notice from the host, you remove the files,
+done.
+
+**License interaction:** the project's CC BY-NC-SA 4.0 license already
+forbids others from commercializing the plans (the NC clause). Continue
+to publish under that license. It doesn't grant rights you don't have,
+but it sets the right expectation for the fan community.
+
+### Question 2: Can the single prototype be sold?
+
+This is where the legal answer doesn't bend.
+
+A one-time sale of one derivative-work object is **still copyright
+infringement** under US law (and similarly under UK CDPA 1988). There is
+no "first physical build" exception. The first sale doctrine (17 USC
+§109) covers reselling a copy you bought lawfully — it does **not**
+authorize selling a copy you yourself manufactured without a license.
+
+**Practical risk for a single low-priced listing:**
+
+| Outcome | Likelihood |
+|---|---|
+| Etsy/eBay automated systems pull the listing within days, before sale completes | Moderate to high — bots flag "hitchhiker," "DON'T PANIC," and prop-replica keywords |
+| Listing survives, sale completes quietly | Possible, especially if listed ambiguously |
+| Cease-and-desist letter | Low |
+| Lawsuit | Very low for a single sale, not zero |
+
+The dominant outcome is "listing yanked before it sells, time wasted,
+prototype still in your basement." Lawsuits over a single low-dollar sale
+are extremely rare; the cost of pursuing one exceeds any damages.
+
+But the goal here was *getting rid of the prototype*, not *getting paid*
+specifically. There are cleaner ways to dispose of one finished build:
+
+### Better disposal options (no legal risk)
+
+- **Gift it.** To a fellow fan, a Douglas Adams enthusiast in your
+  social circle, a maker friend, or a coworker. Distributing a single
+  copy as a personal gift to someone you know is the lowest-risk path
+  and is functionally equivalent to "selling for $0." Rights holders do
+  not pursue private gifts.
+- **Donate to a fan-community auction or raffle.** A local sci-fi con
+  charity raffle, a fan-club fundraiser, a Reddit r/HHGTTG raffle. The
+  charitable framing doesn't grant a license, but enforcement against
+  charity raffles is essentially nil. The optics for the rights holder
+  would be terrible.
+- **Display it indefinitely.** Bookshelf, office, con table, makerspace
+  display case. Costs nothing, dispenses with the "what do I do with
+  it" question, and you keep the portfolio piece.
+- **Use it as a portfolio piece for paid commission work.** Show it as
+  evidence of your prop-build skill; if someone hires you to build
+  *something custom they specify*, that's a different transaction with
+  different legal posture.
+
+### What to avoid even in a one-time scenario
+
+- Listing it on Etsy or eBay. Even one listing is indexed, scraped, and
+  flagged. The most probable outcome is wasted effort.
+- Listing it with "Hitchhiker's Guide," "DON'T PANIC," or film-specific
+  language anywhere in the description or tags. That's where automated
+  enforcement triggers.
+- Doing a paid private sale to a stranger via a marketplace platform's
+  message system specifically to evade detection. That's not just
+  legally identical to a public sale — it adds a small bad-faith
+  signal if it ever did get pursued.
+
+### Updated recommendation
+
+- Publish the plans for free under the existing CC BY-NC-SA 4.0 license.
+  Risk: low, common practice, fits the project's stated intent.
+- **Don't sell the physical prototype.** Gift it, donate it to a fan
+  raffle, or keep it as a display piece. The likely outcome of an Etsy
+  listing is the listing getting yanked anyway, so the "sell it to
+  recover materials cost" dollars probably don't materialize.
+
 ## Sources
 
 - [USPTO record for "Hitchhiker's Guide to the Galaxy" — Disney, Serial 78614189, abandoned 2007](https://uspto.report/TM/78614197)
